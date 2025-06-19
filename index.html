@@ -37,7 +37,16 @@
             <div class="parallax-bg" style="background-image: url('https://r2.flowith.net/files/o/1750088550223-abstract_minimalist_luxury_tech_background_index_0@1536x1024.png');"></div>
             <div class="absolute inset-0 bg-primary opacity-50"></div>
             <div class="relative z-10 flex flex-col items-center animate-fade-in">
-<img src="Kasanji Logo Transparente.png" alt="Logo Kasanji" class="w-64 h-64 md:w-96 md:h-96 mx-auto mb-10 animate-pulse-fade drop-shadow-xl">
+<img src="Kasanji Logo Transparente.png" alt="Logo Kasanji" class="w-64 h-64 md:w-96 md:h-96 mx-auto mb-10 animate-pulse-fade drop-shadow-xl"> <style>
+  @keyframes pulseFade {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.95; }
+  }
+
+  .animate-pulse-fade {
+    animation: pulseFade 4s ease-in-out infinite;
+  }
+</style>
                 <h1 class="text-4xl md:text-6xl font-black tracking-tighter mt-4">Inovação. Precisão. Futuro.</h1>
                 <p class="mt-4 max-w-2xl text-lg md:text-xl text-secondary/80">
                     Displays transparentes de LED que redefinem a arquitetura e a publicidade.
