@@ -3,415 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KASANJI 1BOX - Inovação. Precisão. Futuro.</title>
+    <title>KASANJI 1BOX - Inovação em Displays Inteligentes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-primary text-secondary font-sans antialiased">
+<body class="bg-[var(--cor-fundo-primario)] text-[var(--cor-texto)] font-['Inter',_sans-serif] antialiased">
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
 
-  <header class="fixed top-0 left-0 w-full z-50 transition-colors duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-           <a href="#inicio">
-<a class="hidden md:flex text-xl font-bold text-white">K1B</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#solucoes" class="nav-link">Soluções</a>
-                <div class="relative group">
-  <div class="group relative">
-  <a href="#smartfilm" class="nav-link">Smart Film ▾</a>
-  <div class="absolute hidden group-hover:block bg-black text-white text-sm py-2 px-4 rounded shadow-lg z-50">
-    <a href="#galeria" class="block py-1 hover:bg-gray-800 rounded px-2">Galeria</a>
-    <a href="#videos" class="block py-1 hover:bg-gray-800 rounded px-2">Vídeos</a>
-  </div>
-                <a href="#contato" class="nav-link">Contato</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="inicio" class="h-screen w-full flex items-center justify-center text-center relative overflow-hidden section">
-            <div class="parallax-bg" style="background-image: url('https://r2.flowith.net/files/o/1750088550223-abstract_minimalist_luxury_tech_background_index_0@1536x1024.png');"></div>
-            <div class="absolute inset-0 bg-primary opacity-50"></div>
-            <div class="relative z-10 flex flex-col items-center animate-fade-in">
-<img src="Kasanji Logo Transparente.png" alt="Logo Kasanji" class="w-64 h-64 md:w-96 md:h-96 mx-auto mb-10 animate-pulse-fade drop-shadow-xl"> <style>
-  @keyframes pulseFade {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.95; }
-  }
-
-  .animate-pulse-fade {
-    animation: pulseFade 4s ease-in-out infinite;
-  }
-</style>
-                <h1 class="text-4xl md:text-6xl font-black tracking-tighter mt-4">Inovação. Precisão. Futuro.</h1>
-                <p class="mt-4 max-w-2xl text-lg md:text-xl text-secondary/80">
-                    Displays transparentes de LED que redefinem a arquitetura e a publicidade.
-                </p>
+    <div id="app" class="flex flex-col min-h-screen">
+        <header class="bg-[var(--cor-fundo-primario)]/80 backdrop-blur-sm sticky top-0 z-50 border-b border-[var(--cor-borda)]">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#inicio" class="text-2xl font-bold text-[var(--cor-destaque)] z-[110]">K1B</a>
+                <button id="command-button" class="z-[110]" aria-label="Abrir Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
-        </section>
-        
-        <section id="sobre" class="py-20 md:py-32 section">
-            <div class="container mx-auto px-6 text-center">
-                <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                    <div class="icon-display icon-about"></div>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Sobre a K1B</h2>
-                <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                    Fundada na paixão pela tecnologia de vanguarda, a KASANJI 1BOX nasceu para transformar espaços com inovação e propósito. Nossa missão é integrar soluções visuais inteligentes de forma fluida e elegante na arquitetura moderna, redefinindo a interação entre ambientes e pessoas com um compromisso inabalável com a qualidade e o design de excelência.
-                </p>
-            </div>
-        </section>
+        </header>
 
-        <section id="solucoes" class="py-20 md:py-32 section relative overflow-hidden">
-            <div class="parallax-bg" style="background-image: url('https://r2.flowith.net/files/o/1750088550223-abstract_minimalist_luxury_tech_background_index_0@1536x1024.png');"></div>
-            <div class="absolute inset-0 bg-primary opacity-90"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-16">
-                     <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-solutions"></div>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Soluções Tecnológicas</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                        Desenvolvemos tecnologias de ponta para criar experiências visuais imersivas e funcionais.
-                    </p>
+        <main class="flex-grow">
+            
+            <section id="inicio" class="text-center py-20 md:py-32 bg-[var(--cor-fundo-secundario)] border-b border-[var(--cor-borda)]">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Redefinindo a Interação Entre Tecnologia e Arquitetura</h1>
+                    <p class="text-lg md:text-xl text-[var(--cor-texto-secundario)] mb-8 max-w-3xl mx-auto">Transformamos superfícies passivas em telas dinâmicas e inteligentes, integrando o mundo digital ao ambiente físico de forma fluida e elegante.</p>
+                    <a href="#produtos" class="inline-block bg-[var(--cor-destaque)] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
+                        Explore nossos Produtos
+                    </a>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="solution-card scroll-target" style="--delay: 0.3s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Displays Transparentes</h3>
-                        <p class="text-secondary/70">Telas de LED com até 92% de transparência que se integram perfeitamente em fachadas e interiores, preservando a luz natural e a visibilidade.</p>
-                    </div>
-                    <div class="solution-card scroll-target" style="--delay: 0.4s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Sistemas Embarcados</h3>
-                        <p class="text-secondary/70">Soluções de hardware e software customizadas para controle e gestão de conteúdo em tempo real, garantindo performance e confiabilidade.</p>
-                    </div>
-                    <div class="solution-card scroll-target" style="--delay: 0.5s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Análise de Dados Visuais</h3>
-                        <p class="text-secondary/70">Plataformas que coletam e analisam dados de interação, oferecendo insights valiosos para otimização de campanhas e experiências de utilizador.</p>
-                    </div>
-                     <div class="solution-card scroll-target" style="--delay: 0.6s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Automação Industrial</h3>
-                        <p class="text-secondary/70">Integração de displays inteligentes em linhas de produção para monitoramento e controle, aumentando a eficiência e a segurança operacional.</p>
-                    </div>
-                     <div class="solution-card scroll-target" style="--delay: 0.7s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Fachadas de Mídia</h3>
-                        <p class="text-secondary/70">Transformamos edifícios em marcos digitais dinâmicos com soluções de grande escala, resistentes e de alto impacto visual.</p>
-                    </div>
-                     <div class="solution-card scroll-target" style="--delay: 0.8s;">
-                        <h3 class="text-xl font-bold text-accent mb-2">Design de Interiores Inteligente</h3>
-                        <p class="text-secondary/70">Divisórias e superfícies de vidro que se tornam displays sob demanda, combinando funcionalidade, privacidade e estética futurista.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="smartfilm" class="py-20 md:py-32 section">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-smartfilm"></div>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Smart Film: O Futuro da Privacidade</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                        Nossa linha Smart Film utiliza a tecnologia PDLC (Polymer Dispersed Liquid Crystal) para transformar qualquer superfície de vidro, oferecendo privacidade instantânea sob demanda.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card-visual scroll-target" style="--delay: 0.3s;">
-                        <img src="https://r2.flowith.net/files/o/1750107379449-luxurious_corporate_office_with_smart_glass_divider_index_0@1024x1024.png" alt="Smart Film K1B Série PRO em ambiente corporativo de luxo" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Série PRO</h3>
-                            <p class="text-secondary/70">Desenvolvida para os ambientes mais exigentes, a Série PRO representa o auge da tecnologia Smart Film. Oferece a máxima transparência no estado 'ON' e privacidade completa no estado 'OFF'. Ideal para escritórios corporativos, salas de conferência e fachadas de luxo, integra a tecnologia DualSurf, transformando o vidro em uma tela de projeção 4K, e o sistema ThermoArmor para eficiência energética superior, bloqueando 99% dos raios UV.</p>
+            <section id="sobre" class="py-16 md:py-24">
+                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nossa Visão</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Inovação que Inspira e Eleva a Experiência Humana</h2>
+                        <div class="space-y-4 text-[var(--cor-texto-secundario)]">
+                            <p>A KASANJI 1BOX foi fundada com o propósito de redefinir a interação entre tecnologia e arquitetura. Nossa missão é transformar superfícies passivas em telas dinâmicas e inteligentes, integrando o mundo digital ao ambiente físico de forma fluida e elegante.</p>
+                            <p>Impulsionados pela inovação, criamos soluções de display que não apenas comunicam, mas também inspiram e elevam a experiência humana, mantendo a estética e a funcionalidade no centro de tudo o que fazemos.</p>
                         </div>
                     </div>
-                    <div class="project-card-visual scroll-target" style="--delay: 0.4s;">
-                        <img src="https://r2.flowith.net/files/o/1750107374171-modern_minimalist_residential_bathroom_index_1@1024x1024.png" alt="Smart Film K1B Série ECO em banheiro residencial moderno" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Série ECO</h3>
-                            <p class="text-secondary/70">A Série ECO foca na sustentabilidade e eficiência energética sem comprometer a funcionalidade. Com um consumo de energia otimizado, esta série reduz significativamente os custos de climatização ao bloquear raios infravermelhos. É a escolha inteligente para projetos de construção verde, residências e espaços comerciais que buscam um equilíbrio entre tecnologia, conforto e responsabilidade ambiental.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual scroll-target" style="--delay: 0.5s;">
-                        <img src="https://r2.flowith.net/files/o/1750107381566-smart_film_deco_luxury_storefront_night_display_index_2@1024x1024.png" alt="Smart Film K1B Série DECO em vitrine de loja de luxo" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Série DECO</h3>
-                            <p class="text-secondary/70">Liberte a sua criatividade com a Série DECO. Esta linha foi projetada para designers de interiores e arquitetos que buscam integrar cor e dinamismo aos seus projetos. Além da funcionalidade de privacidade instantânea, a Série DECO oferece uma gama de cores e padrões personalizáveis no estado opaco, permitindo a criação de ambientes únicos e memoráveis, desde divisórias de escritórios a vitrines de varejo.</p>
-                        </div>
+                    <div class="bg-[var(--cor-fundo-secundario)] rounded-lg p-8 border border-[var(--cor-borda)] flex items-center justify-center h-full min-h-[250px]">
+                         <div class="w-3/4 h-3/4 flex items-center justify-center text-8xl font-bold text-[var(--cor-destaque)] opacity-50">K1B</div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="galeria" class="py-20 md:py-32 section bg-primary">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20">
-                    <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-gallery"></div>
+            <section id="produtos" class="py-16 md:py-24 bg-[var(--cor-fundo-secundario)] border-y border-[var(--cor-borda)]">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nosso Portfólio</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-12">Produtos que Moldam o Futuro</h2>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Galeria de Produtos</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                        Explore a versatilidade das nossas soluções aplicadas em projetos reais e conceituais, da arquitetura ao varejo de luxo.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.3s;">
-                        <img src="https://r2.flowith.net/files/o/1750004080154-photorealistic_mockup_of_kasanji_1box_on_modern_skyscraper_index_0@1024x1024.png" alt="MEDIA GLASS - SkySign Corporativo" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">MEDIA GLASS - SkySign Corporativo</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 30m x 20m (Customizável)</p>
-                            <p class="text-secondary/70">Solução de branding em larga escala para arranha-céus. Resistente a intempéries (IP67), com brilho adaptativo para visibilidade diurna e noturna. Sincronização de conteúdo via cloud.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.4s;">
-                        <img src="https://r2.flowith.net/files/o/1750107379449-luxurious_corporate_office_with_smart_glass_divider_index_0@1024x1024.png" alt="Smart Film PRO - Divisória Executiva" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Smart Film PRO - Divisória Executiva</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 4m x 2.8m (Painel único)</p>
-                            <p class="text-secondary/70">Película de privacidade comutável (PDLC) com controle via app e integração BMS. Bloqueio de 99.9% UV e 85% IR para máximo conforto térmico e eficiência energética.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.5s;">
-                        <img src="https://r2.flowith.net/files/o/1750004077954-luxury_minimalist_store_interior_featuring_transparent_led_display_index_1@1536x1024.png" alt="MEDIA GLASS - Tela de Varejo Imersiva" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">MEDIA GLASS - Tela de Varejo Imersiva</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 5m x 3m</p>
-                            <p class="text-secondary/70">Display transparente P3.9mm para interiores de luxo. Cria um pano de fundo digital sem obstruir a visão, integrando-se com a iluminação para uma experiência imersiva.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.3s;">
-                        <img src="https://r2.flowith.net/files/o/1750107381566-smart_film_deco_luxury_storefront_night_display_index_2@1024x1024.png" alt="Smart Film DECO - Vitrine Noturna" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Smart Film DECO - Vitrine Noturna</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 3.5m x 2.5m</p>
-                            <p class="text-secondary/70">Combina privacidade com projeção de marca, apresentando padrões personalizáveis no estado opaco. Alta luminosidade e contraste para impacto visual noturno.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.4s;">
-                        <img src="https://r2.flowith.net/files/o/1750004112672-urban_integration_lighting_display_mockup_index_2@1024x1536.png" alt="MEDIA GLASS - Fachada Histórica" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">MEDIA GLASS - Fachada Histórica</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 6m x 10m (Modular)</p>
-                            <p class="text-secondary/70">Display LED com 95% de transparência para integração em edifícios históricos, preservando a estética original com baixo impacto estrutural e brilho adaptativo.</p>
-                        </div>
-                    </div>
-                    <div class="project-card-visual gallery-item cursor-pointer scroll-target" style="--delay: 0.5s;">
-                        <img src="https://r2.flowith.net/files/o/1750107374171-modern_minimalist_residential_bathroom_index_1@1024x1024.png" alt="Smart Film ECO - Janela Residencial" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-accent mb-2">Smart Film ECO - Janela Residencial</h3>
-                            <p class="text-secondary/70 font-mono text-sm mb-4">Dimensões: 1.8m x 2.2m</p>
-                            <p class="text-secondary/70">Foco em sustentabilidade com consumo de energia ultra baixo (<4W/m²). Ideal para privacidade instantânea em residências, mantendo a iluminação natural.</p>
-                        </div>
+                    <div id="produtos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="exploracao" class="py-20 md:py-32 section">
-            <div class="container mx-auto px-6 text-center">
-                <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                    <div class="icon-display icon-explore"></div>
+            <section id="tecnologias" class="py-16 md:py-24">
+                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nossa Base</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Tecnologia de Vanguarda</h2>
+                        <div class="space-y-4 text-[var(--cor-texto-secundario)]">
+                            <p>Na K1B, a inovação está no nosso DNA. Nossas tecnologias proprietárias são a força motriz por trás de cada produto, permitindo integrações perfeitas entre o mundo físico e digital.</p>
+                            <p>Desde cristais líquidos comutáveis a películas de LED transparentes, nossa pesquisa e desenvolvimento contínuos garantem que estamos sempre na fronteira da tecnologia de displays, oferecendo soluções que são não apenas visualmente deslumbrantes, mas também eficientes e duráveis.</p>
+                        </div>
+                    </div>
+                    <div class="bg-[var(--cor-fundo-secundario)] rounded-lg p-8 border border-[var(--cor-borda)] flex items-center justify-center h-full min-h-[250px]">
+                         <i data-lucide="cpu" class="w-24 h-24 text-[var(--cor-destaque)]"></i>
+                    </div>
                 </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Exploração Tecnológica</h2>
-                <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg mb-20 scroll-target" style="--delay: 0.2s;">
-                    Interaja com nossos produtos em três dimensões. Gire, aproxime e explore cada detalhe da nossa inovação.
-                </p>
-                <div class="w-full h-[60vh] max-w-4xl mx-auto scroll-target rounded-lg border border-support shadow-2xl bg-black/20" style="--delay: 0.3s;">
-                    <model-viewer src="https://v3.fal.media/files/panda/czhlIjfXEmxTSSK0apdcd_model.glb"
-                                  alt="Modelo 3D do Smart Film PRO"
-                                  camera-controls
-                                  touch-action="pan-y"
-                                  ar
-                                  auto-rotate
-                                  environment-image="neutral"
-                                  exposure="1.2"
-                                  shadow-intensity="1.1"
-                                  shadow-softness="0.5"
-                                  class="w-full h-full model-viewer-styles">
-                    </model-viewer>
-                </div>
-                <p class="mt-8 max-w-3xl mx-auto text-secondary/70 text-sm scroll-target" style="--delay: 0.4s;">
-                    Modelo: Smart Film PRO. Use o mouse ou o toque para interagir.
-                </p>
-            </div>
-        </section>
+            </section>
 
-        <section id="catalogo" class="py-20 md:py-32 section">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                     <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-catalog"></div>
+            <section id="contato" class="py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+                        <p class="text-lg text-[var(--cor-texto-secundario)] mb-10">Tem um projeto em mente? Nossa equipe está pronta para ajudar a transformar sua visão em realidade. Preencha o formulário abaixo.</p>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Catálogo Digital</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                        Explore o nosso portfólio completo de produtos e descubra as especificações técnicas que impulsionam a inovação.
-                    </p>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 scroll-target" style="--delay: 0.3s;">
-                        <img src="https://r2.flowith.net/files/o/1750088476559-photorealistic_mockup_of_kasanji_1box_media_glass_facade_index_2@1024x1024.png" alt="Fachada de Mídia K1B" class="rounded-lg shadow-2xl w-full">
-                    </div>
-                    <div class="md:w-1/2 text-center md:text-left scroll-target" style="--delay: 0.4s;">
-                        <h3 class="text-2xl font-bold mb-4">Veja Nossas Soluções em Ação</h3>
-                        <p class="text-secondary/80 mb-8">
-                            Nosso catálogo detalha a versatilidade e o poder da tecnologia K1B. Faça o download para ter acesso a informações completas, estudos de caso e inspiração para o seu próximo projeto.
-                        </p>
-                        <a href="https://drive.google.com/drive/folders/1BRldRvUFn00Y_ezZhHPG-9ESzmBwWYiQ?usp=sharing" target="_blank" class="cta-button">Download do Catálogo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projetos" class="py-20 md:py-32 section relative overflow-hidden">
-            <div class="parallax-bg" style="background-image: url('https://r2.flowith.net/files/o/1750088550223-abstract_minimalist_luxury_tech_background_index_0@1536x1024.png');"></div>
-            <div class="absolute inset-0 bg-primary opacity-90"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-16">
-                    <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-projects"></div>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Casos de Sucesso</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                       Veja como nossas soluções transformaram os negócios dos nossos parceiros e o ambiente ao nosso redor.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="project-card-visual scroll-target" style="--delay: 0.3s;">
-                        <img src="https://r2.flowith.net/files/o/1750088476559-photorealistic_mockup_of_kasanji_1box_media_glass_facade_index_2@1024x1024.png" alt="Fachada de Mídia K1B no Edifício Solaris" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Edifício Corporativo Solaris</h3>
-                            <p class="text-secondary/70 mb-4">Implementação de uma fachada de mídia interativa de 200m², resultando em um aumento de 40% no engajamento da marca.</p>
-                            <span class="font-semibold text-accent">Cliente: Grupo Solaris</span>
+                    <form class="max-w-2xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-card-visual scroll-target" style="--delay: 0.4s;">
-                        <div class="w-full h-64 bg-primary flex items-center justify-center p-8 border-b border-support">
-                             <p class="text-secondary/50 text-center text-lg">Conceito de Varejo de Luxo</p>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]"></textarea>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Vitrines Interativas de Luxo</h3>
-                            <p class="text-secondary/70 mb-4">Desenvolvimento de vitrines inteligentes que alternam entre transparência e vídeo, aumentando o tráfego de pedestres em 60%.</p>
-                            <span class="font-semibold text-accent">Cliente: Marca Global (Confidencial)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="roadmap" class="py-20 md:py-32 section">
-            <div class="container mx-auto px-6">
-                 <div class="text-center mb-16">
-                     <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-roadmap"></div>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Nosso Caminho para o Futuro</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                       Estamos em constante evolução, pesquisando e desenvolvendo o futuro da tecnologia visual.
-                    </p>
-                </div>
-                <div class="roadmap-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Q4 2025</h3>
-                            <p>Lançamento da nova geração de displays com eficiência energética 15% superior.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Q2 2026</h3>
-                            <p>Expansão para o mercado norte-americano com abertura de escritório em Nova York.</p>
-                        </div>
-                    </div>
-                     <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Q4 2026</h3>
-                            <p>Introdução de tecnologia de controle por gestos para displays interativos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="py-20 md:py-32 section relative overflow-hidden">
-            <div class="parallax-bg" style="background-image: url('https://r2.flowith.net/files/o/1750088550223-abstract_minimalist_luxury_tech_background_index_0@1536x1024.png');"></div>
-            <div class="absolute inset-0 bg-primary opacity-90"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                 <div class="text-center mb-16">
-                     <div class="flex justify-center mb-8 scroll-target" style="--delay: 0s;">
-                        <div class="icon-display icon-contact"></div>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-target" style="--delay: 0.1s;">Entre em Contato</h2>
-                    <p class="max-w-3xl mx-auto text-secondary/80 md:text-lg scroll-target" style="--delay: 0.2s;">
-                       Tem um projeto em mente? Nossa equipe está pronta para transformar sua visão em realidade.
-                    </p>
-                </div>
-                
-                <div class="max-w-xl mx-auto text-center mb-12 scroll-target" style="--delay: 0.25s;">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-secondary/80">
-                        <div class="p-4 rounded-lg border border-support bg-black/20">
-                            <h4 class="font-bold text-lg text-secondary mb-2">Nosso Escritório</h4>
-                            <p>Rua Rainha N´Ginga</p>
-                            <p>Edificio Rainha N' Ginga, N.187, 8º Andar</p>
-                            <p>Ingombotas – Luanda, Angola</p>
-                        </div>
-                        <div class="p-4 rounded-lg border border-support bg-black/20">
-                            <h4 class="font-bold text-lg text-secondary mb-2">Contato Direto</h4>
-                            <p>Para consultas comerciais e parcerias:</p>
-                            <a href="mailto:Comercial@k1b.ao" class="font-semibold text-accent hover:text-blue-400 transition-colors">Comercial@k1b.ao</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="max-w-xl mx-auto">
-                    <div id="form-feedback" class="form-feedback hidden mb-6"></div>
-                    <form action="#" method="POST" class="space-y-6 scroll-target" style="--delay: 0.3s;" novalidate>
-                        <div>
-                            <label for="name" class="sr-only">Nome</label>
-                            <input type="text" name="name" id="name" placeholder="Nome" class="form-input" required>
-                        </div>
-                        <div>
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" class="form-input" required>
-                        </div>
-                         <div>
-                            <label for="message" class="sr-only">Mensagem</label>
-                            <textarea name="message" id="message" rows="4" placeholder="Sua mensagem" class="form-input" required></textarea>
-                        </div>
-                        <div>
-                             <button type="submit" class="cta-button w-full">Enviar Mensagem</button>
+                        <div class="text-center">
+                            <button type="submit" class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">
+                                Enviar Mensagem
+                            </button>
                         </div>
                     </form>
                 </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="bg-black/20 py-8">
-        <div class="container mx-auto px-6 text-center text-secondary/50">
-            <p>&copy; 2025 KASANJI 1BOX. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+            </section>
+        </main>
 
-    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-80 z-[100] hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300 ease-in-out">
-        <div class="bg-support rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-6 md:p-8 transform scale-95 transition-transform duration-300 ease-in-out">
-            <button id="modal-close-btn" class="absolute top-4 right-4 text-secondary/50 hover:text-secondary transition-colors z-10">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <div class="flex flex-col md:flex-row gap-6 md:gap-8">
-                <div class="md:w-1/2 flex-shrink-0">
-                    <img id="modal-img" src="" alt="Imagem do Produto" class="w-full h-auto object-contain rounded-md max-h-[75vh]">
-                </div>
-                <div class="md:w-1/2 flex flex-col">
-                    <h3 id="modal-title" class="text-2xl font-bold text-accent mb-4"></h3>
-                    <div id="modal-description" class="text-secondary/80 space-y-4 overflow-y-auto"></div>
+        <footer class="bg-[var(--cor-fundo-primario)] border-t border-[var(--cor-borda)] mt-auto">
+            <div class="container mx-auto px-6 py-8 text-center text-[var(--cor-texto-secundario)]">
+                <p>&copy; 2025 KASANJI 1BOX. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="menu-overlay">
+      <nav>
+          <ul class="space-y-6">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre Nós</a></li>
+              <li><a href="#produtos">Produtos</a></li>
+              <li><a href="portfolio.html">Portfólio</a></li>
+              <li><a href="#tecnologias">Tecnologias</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+      </nav>
+    </div>
+
+    <div id="product-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-[var(--cor-fundo-primario)]/90 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div id="modal-content" class="relative w-full max-w-4xl bg-[var(--cor-fundo-secundario)] rounded-lg border border-[var(--cor-borda)] shadow-2xl shadow-black/50 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 transition-transform duration-300 transform scale-95">
+            
+            <div class="relative w-full h-64 md:h-auto rounded-md overflow-hidden border border-[var(--cor-borda)] bg-[var(--cor-fundo-primario)] flex items-center justify-center">
+                <img id="modal-image" src="" alt="Imagem do produto" class="w-full h-full object-cover">
+            </div>
+    
+            <div class="flex flex-col">
+                <h3 id="modal-title" class="text-3xl font-bold text-[var(--cor-destaque)] mb-4"></h3>
+                <p id="modal-description" class="text-[var(--cor-texto-secundario)] text-base flex-grow"></p>
+                <div class="mt-6 text-right">
+                    <a href="#contato" id="modal-contact-link" class="inline-block text-sm font-semibold text-[var(--cor-destaque)] hover:underline">
+                        Solicitar Orçamento &rarr;
+                    </a>
                 </div>
             </div>
+    
+            <button id="modal-close-button" class="absolute top-4 right-4 text-[var(--cor-texto-secundario)] hover:text-[var(--cor-destaque)] transition-colors" aria-label="Fechar modal">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="interactive.js"></script>
 </body>
 </html>
