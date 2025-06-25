@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeria | KASANJI 1BOX</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="../Kasanji%20Logo%20Transparente.png" />
+  <style>
+    @keyframes glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 5px #ffffff22) drop-shadow(0 0 10px #ffffff33);
+      }
+      50% {
+        filter: drop-shadow(0 0 15px #ffffff55) drop-shadow(0 0 30px #ffffff88);
+      }
+    }
+    .animate-glow {
+      animation: glow 3s ease-in-out infinite;
+    }
+  </style>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans tracking-tight">
 
   <!-- HEADER FIXO COM LOGO -->
-  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-sm z-50 shadow-lg p-4 flex items-center justify-center">
+  <header class="fixed top-0 left-0 w-full bg-black/60 backdrop-blur-sm z-50 shadow-md p-4 flex items-center justify-center">
     <a href="../index.html">
-      <img src="../Kasanji%20Logo%20Transparente.png" alt="Logo KASANJI 1BOX" class="w-[160px] hover:scale-105 transition-transform duration-300" />
+      <img src="../Kasanji%20Logo%20Transparente.png" alt="Logo KASANJI 1BOX"
+        class="w-[160px] animate-glow transition-transform hover:scale-105 duration-300" />
     </a>
   </header>
 
@@ -19,31 +34,38 @@
   <div class="h-[100px]"></div>
 
   <!-- TÍTULO -->
-  <section class="text-center mb-12">
-    <h1 class="text-4xl font-bold">Galeria de Fotos & Vídeos</h1>
-    <p class="text-gray-400 mt-2">Descubra nossos projetos e inovações visuais</p>
+  <section class="text-center mb-16 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">Galeria de Fotos & Vídeos</h1>
+    <p class="text-gray-400 text-lg">Descubra nossos projetos, instalações e experiências visuais</p>
   </section>
 
-  <!-- GALERIA -->
-  <main class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
-    <!-- FOTOS -->
-    <img src="foto1.jpeg" alt="Foto 1" class="rounded-lg shadow-lg" />
-    <img src="foto11.jpeg" alt="Foto 11" class="rounded-lg shadow-lg" />
-    <img src="foto13.png" alt="Foto 13" class="rounded-lg shadow-lg" />
-    <img src="foto2.jpeg" alt="Foto 2" class="rounded-lg shadow-lg" />
-    <img src="foto3.jpeg" alt="Foto 3" class="rounded-lg shadow-lg" />
-    <img src="foto4.jpeg" alt="Foto 4" class="rounded-lg shadow-lg" />
-    <img src="foto5.jpeg" alt="Foto 5" class="rounded-lg shadow-lg" />
-    <img src="foto6.jpeg" alt="Foto 6" class="rounded-lg shadow-lg" />
-    <img src="foto8.jpeg" alt="Foto 8" class="rounded-lg shadow-lg" />
+  <!-- GALERIA DE FOTOS -->
+  <section class="max-w-7xl mx-auto px-4 mb-20">
+    <h2 class="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">Fotos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="foto1.jpeg" alt="Foto 1" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto11.jpeg" alt="Foto 11" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto13.png" alt="Foto 13" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto2.jpeg" alt="Foto 2" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto3.jpeg" alt="Foto 3" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto4.jpeg" alt="Foto 4" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto5.jpeg" alt="Foto 5" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto6.jpeg" alt="Foto 6" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+      <img src="foto8.jpeg" alt="Foto 8" class="rounded-xl shadow-xl hover:opacity-90 transition" />
+    </div>
+  </section>
 
-    <!-- VÍDEOS -->
-    <video src="autosmart.mp4" controls class="rounded-lg shadow-lg w-full"></video>
-    <video src="autosmartfilm.mp4" controls class="rounded-lg shadow-lg w-full"></video>
-    <video src="smartfilm.mp4" controls class="rounded-lg shadow-lg w-full"></video>
-    <video src="video2.mp4" controls class="rounded-lg shadow-lg w-full"></video>
-    <video src="video3.mp4" controls class="rounded-lg shadow-lg w-full"></video>
-  </main>
+  <!-- GALERIA DE VÍDEOS -->
+  <section class="max-w-6xl mx-auto px-4 mb-32">
+    <h2 class="text-2xl font-semibold mb-6 border-b border-gray-700 pb-2">Vídeos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <video src="autosmart.mp4" controls class="rounded-xl shadow-lg w-full aspect-video"></video>
+      <video src="autosmartfilm.mp4" controls class="rounded-xl shadow-lg w-full aspect-video"></video>
+      <video src="smartfilm.mp4" controls class="rounded-xl shadow-lg w-full aspect-video"></video>
+      <video src="video2.mp4" controls class="rounded-xl shadow-lg w-full aspect-video"></video>
+      <video src="video3.mp4" controls class="rounded-xl shadow-lg w-full aspect-video"></video>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="text-center text-sm text-gray-500 py-6 border-t border-gray-800">
@@ -52,5 +74,3 @@
 
 </body>
 </html>
-
-
