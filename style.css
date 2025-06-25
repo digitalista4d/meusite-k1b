@@ -188,3 +188,16 @@ textarea:hover {
 .animate-logo-glow {
   animation: logo-glow 3s ease-in-out infinite;
 }
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #00000022) drop-shadow(0 0 10px #00000033);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #00000044) drop-shadow(0 0 30px #00000066);
+  }
+}
+
+.animate-logo-glow {
+  animation: glow 3s ease-in-out infinite;
+}
