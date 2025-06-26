@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
   <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
-`;
 
   </div>
   <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
