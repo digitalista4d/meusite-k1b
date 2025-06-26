@@ -15,22 +15,66 @@
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-
     <div id="app" class="flex flex-col min-h-screen">
-    <header class="w-full py-8 bg-white relative flex items-center justify-center border-b border-[var(--cor-borda)]">
-  <!-- Logo centralizado -->
-  <img 
-  src="Kasanji%20Logo%20Transparente.png"
-  alt="Kasanji 1BOX Logo"
-  class="w-[220px] animate-logo-glow drop-shadow-[0_0_25px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:scale-105" />
+    <!-- ... (restante do conteúdo permanece igual até a seção de contato) -->
 
-  <!-- Botão do Menu no canto superior direito -->
-<button id="command-button" class="fixed top-6 right-6 text-black bg-white rounded-full shadow-lg p-2 z-[110] transition-all duration-300 hover:bg-neutral-100" aria-label="Abrir Menu">
-    <i data-lucide="menu" class="w-7 h-7"></i>
-  </button>
-</header>
+<section id="contato" class="py-16 md:py-24">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+      <p class="text-lg text-[var(--cor-texto-secundario)] mb-10">
+        Tem um projeto em mente? Nossa equipe está pronta para ajudar a transformar sua visão em realidade. Preencha o formulário abaixo.
+      </p>
+    </div>
+    <form id="contato-form" class="max-w-2xl mx-auto" action="https://formsubmit.co/Comercial@k1b.ao" method="POST">
+      <input type="hidden" name="_next" value="https://meusite-k1b.vercel.app/#contato?success=true">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+        </div>
+      </div>
+      <div class="mb-6">
+        <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">
+          Enviar Mensagem
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
 
+<!-- Mensagem de sucesso -->
+<div id="form-success" class="fixed bottom-6 right-6 z-[9999] bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg opacity-0 pointer-events-none transition-all duration-500">
+  ✅ Mensagem enviada com sucesso!
+</div>
 
+<!-- Scripts -->
+<script type="module" src="script.js"></script>
+<script src="interactive.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const successMessage = document.getElementById('form-success');
+    if (params.has("success")) {
+      successMessage.classList.remove("opacity-0", "pointer-events-none");
+      successMessage.classList.add("opacity-100");
+      setTimeout(() => {
+        successMessage.classList.remove("opacity-100");
+        successMessage.classList.add("opacity-0", "pointer-events-none");
+      }, 5000);
+    }
+  });
+</script>
+</body>
+</html>
 
         <main class="flex-grow">
             
