@@ -1,4 +1,4 @@
-import { produtos } from './data.js';
+import { products } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const commandButton = document.getElementById('command-button');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // GRID DE PRODUTOS
     const productsContainer = document.getElementById('produtos-grid');
     if (productsContainer) {
-        produtos.forEach(product => {
+        products.forEach(product => {
             const card = document.createElement('div');
             card.setAttribute('data-product-name', product.name);
             card.className = 'product-card group bg-[var(--cor-fundo-secundario)] rounded-lg p-6 border border-[var(--cor-borda)] transition-all duration-300 hover:border-[var(--cor-destaque)] hover:shadow-2xl hover:shadow-[var(--cor-destaque)]/20 hover:-translate-y-2';
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = e.target.closest('.product-card');
             if (card) {
                 const productName = card.dataset.productName;
-                const productData = produtos.find(p => p.name === productName);
+                const productData = products.find(p => p.name === productName);
                 openModal(productData);
             }
         });
