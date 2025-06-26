@@ -29,30 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const productsContainer = document.getElementById('produtos-grid');
     if (productsContainer) {
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.setAttribute('data-product-name', product.name);
-            card.className = 'product-card group bg-[var(--cor-fundo-secundario)] rounded-lg p-6 border border-[var(--cor-borda)] transition-all duration-300 hover:border-[var(--cor-destaque)] hover:shadow-2xl hover:shadow-[var(--cor-destaque)]/20 hover:-translate-y-2';
-            
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.setAttribute('data-product-name', product.name);
+        card.className = 'product-card group bg-[var(--cor-fundo-secundario)] rounded-lg p-6 border border-[var(--cor-borda)] transition-all duration-300 hover:border-[var(--cor-destaque)] hover:shadow-2xl hover:shadow-[var(--cor-destaque)]/20 hover:-translate-y-2';
+
         card.innerHTML = `
-  <div class="relative w-full h-56 md:h-64 bg-[var(--cor-fundo-primario)] rounded-md mb-4 flex items-center justify-center overflow-hidden border border-[var(--cor-borda)]">
-    <img src="${product.image}" alt="${product.name}" 
-         class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
-         onerror="this.style.display='none'">
-    <div class="absolute inset-0 bg-gradient-to-t from-[var(--cor-fundo-secundario)] to-transparent"></div>
-  </div>
-  <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
-  <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
-`;
-                    
-                </div>
-                <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
-                <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
-            `;
-            productsContainer.appendChild(card);
-        });
-        lucide.createIcons();
-    }
+            <div class="relative w-full h-56 md:h-64 bg-[var(--cor-fundo-primario)] rounded-md mb-4 flex items-center justify-center overflow-hidden border border-[var(--cor-borda)]">
+                <img src="${product.image}" alt="${product.name}" 
+                    class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+                    onerror="this.style.display='none'">
+                <div class="absolute inset-0 bg-gradient-to-t from-[var(--cor-fundo-secundario)] to-transparent"></div>
+            </div>
+            <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
+            <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
+        `;
+        
+        productsContainer.appendChild(card);
+    });
+
+    lucide.createIcons();
+}
+
 
     const modal = document.getElementById('product-modal');
     if (modal && productsContainer) {
