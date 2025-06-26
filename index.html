@@ -138,61 +138,51 @@
     </div>
 
   </div>
+
+           <section id="contato" class="py-16 md:py-24">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+      <p class="text-lg text-[var(--cor-texto-secundario)]">
+        Tem um projeto em mente? Nossa equipe está pronta para transformar sua visão em realidade.
+      </p>
+    </div>
+
+    <form action="https://formsubmit.co/Comercial@k1b.ao" method="POST" class="max-w-2xl mx-auto" id="contato-form">
+      <!-- Config extra do FormSubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem! Em breve entraremos em contacto.">
+      <input type="hidden" name="_next" value="https://meusite.k1b.vercel.app/sucesso.html">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none text-[var(--cor-texto)]">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none text-[var(--cor-texto)]">
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none text-[var(--cor-texto)]"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit"
+          class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">
+          Enviar Mensagem
+        </button>
+      </div>
+    </form>
+  </div>
 </section>
-
-            <section id="contato" class="py-16 md:py-24">
-                <div class="container mx-auto px-6">
-                    <div class="max-w-2xl mx-auto text-center">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
-                        <p class="text-lg text-[var(--cor-texto-secundario)] mb-10">Tem um projeto em mente? Nossa equipe está pronta para ajudar a transformar sua visão em realidade. Preencha o formulário abaixo.</p>
-                    </div>
-                    <form class="max-w-2xl mx-auto" id="contato-form">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-    <div>
-      <label for="name" class="block text-sm font-medium mb-2">Nome</label>
-      <input type="text" id="name" name="name" required
-        class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
-    </div>
-    <div>
-      <label for="email" class="block text-sm font-medium mb-2">Email</label>
-      <input type="email" id="email" name="email" required
-        class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
-    </div>
-  </div>
-  <div class="mb-6">
-    <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
-    <textarea id="message" name="message" rows="5" required
-      class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]"></textarea>
-  </div>
-  <div class="text-center">
-    <button type="submit"
-      class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">
-      Enviar Mensagem
-    </button>
-    <p id="form-alert" class="mt-4 text-sm font-medium text-green-400 hidden">Mensagem enviada com sucesso!</p>
-  </div>
-</form>
-
-<script>
-  const form = document.getElementById('contato-form');
-  const alert = document.getElementById('form-alert');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const nome = encodeURIComponent(data.get('name'));
-    const email = encodeURIComponent(data.get('email'));
-    const mensagem = encodeURIComponent(data.get('message'));
-    const body = `Nome: ${nome}%0AEmail: ${email}%0AMensagem: ${mensagem}`;
-    window.location.href = `mailto:Comercial@k1b.ao?subject=Mensagem%20do%20Site&body=${body}`;
-    alert.classList.remove('hidden');
-    form.reset();
-  });
-</script>
-
-                </div>
-            </section>
-        </main>
 
         <footer class="bg-[var(--cor-fundo-primario)] border-t border-[var(--cor-borda)] mt-auto">
             <div class="container mx-auto px-6 py-8 text-center text-[var(--cor-texto-secundario)]">
