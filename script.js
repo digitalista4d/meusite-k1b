@@ -1,9 +1,9 @@
-import { products } from './data.js';
+import { produtos } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const commandButton = document.getElementById('command-button');
     const menuOverlay = document.getElementById('menu-overlay');
-    const menuLinks = menuOverlay.querySelectorAll('a');
+    const menuLinks = menuOverlay?.querySelectorAll('a') || [];
 
     const toggleMenu = () => {
         const isActive = menuOverlay.classList.contains('menu-active');
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     };
 
-    commandButton.addEventListener('click', toggleMenu);
-    
+    commandButton?.addEventListener('click', toggleMenu);
+
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (menuOverlay.classList.contains('menu-active')) {
@@ -27,47 +27,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // GRID DE PRODUTOS
     const productsContainer = document.getElementById('produtos-grid');
     if (productsContainer) {
-    products.forEach(product => {
-        const card = document.createElement('div');
-        card.setAttribute('data-product-name', product.name);
-        card.className = 'product-card group bg-[var(--cor-fundo-secundario)] rounded-lg p-6 border border-[var(--cor-borda)] transition-all duration-300 hover:border-[var(--cor-destaque)] hover:shadow-2xl hover:shadow-[var(--cor-destaque)]/20 hover:-translate-y-2';
+        produtos.forEach(product => {
+            const card = document.createElement('div');
+            card.setAttribute('data-product-name', product.name);
+            card.className = 'product-card group bg-[var(--cor-fundo-secundario)] rounded-lg p-6 border border-[var(--cor-borda)] transition-all duration-300 hover:border-[var(--cor-destaque)] hover:shadow-2xl hover:shadow-[var(--cor-destaque)]/20 hover:-translate-y-2';
 
-        card.innerHTML = `
-            <div class="relative w-full h-56 md:h-64 bg-[var(--cor-fundo-primario)] rounded-md mb-4 flex items-center justify-center overflow-hidden border border-[var(--cor-borda)]">
-                <img src="${product.image}" alt="${product.name}" 
-                    class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
-                    onerror="this.style.display='none'">
-                <div class="absolute inset-0 bg-gradient-to-t from-[var(--cor-fundo-secundario)] to-transparent"></div>
-            </div>
-            <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
-            <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
-        `;
-        
-        productsContainer.appendChild(card);
-    });
+            card.innerHTML = `
+                <div class="relative w-full h-56 md:h-64 bg-[var(--cor-fundo-primario)] rounded-md mb-4 flex items-center justify-center overflow-hidden border border-[var(--cor-borda)]">
+                    <img src="${product.image}" alt="${product.name}" 
+                         class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+                         onerror="this.style.display='none'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[var(--cor-fundo-secundario)] to-transparent"></div>
+                </div>
+                <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
+                <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
+            `;
 
-    lucide.createIcons();
-}
+            productsContainer.appendChild(card);
+        });
 
+        lucide.createIcons();
+    }
 
+    // MODAL DE PRODUTO
     const modal = document.getElementById('product-modal');
-    if (modal && productsContainer) {
-        const modalImage = document.getElementById('modal-image');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const closeModalButton = document.getElementById('modal-close-button');
-        const modalContactLink = document.getElementById('modal-contact-link');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    const closeModalButton = document.getElementById('modal-close-button');
+    const modalContactLink = document.getElementById('modal-contact-link');
 
+    if (modal && productsContainer) {
         const openModal = (product) => {
             if (!product) return;
-            
-            modalImage.src = product.imageUrl || product.image;
+
+            modalImage.src = product.image;
             modalImage.alt = `Imagem de ${product.name}`;
             modalTitle.textContent = product.name;
             modalDescription.textContent = product.description;
-            
+
             modal.classList.add('modal-visible');
             document.body.style.overflow = 'hidden';
             lucide.createIcons();
@@ -82,20 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = e.target.closest('.product-card');
             if (card) {
                 const productName = card.dataset.productName;
-                const productData = products.find(p => p.name === productName);
+                const productData = produtos.find(p => p.name === productName);
                 openModal(productData);
             }
         });
 
-        closeModalButton.addEventListener('click', closeModal);
-        modalContactLink.addEventListener('click', closeModal);
-
+        closeModalButton?.addEventListener('click', closeModal);
+        modalContactLink?.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
+            if (e.target === modal) closeModal();
         });
-
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('modal-visible')) {
                 closeModal();
