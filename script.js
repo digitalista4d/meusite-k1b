@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="relative w-full h-40 bg-[var(--cor-fundo-primario)] rounded-md mb-4 flex items-center justify-center overflow-hidden border border-[var(--cor-borda)]">
                     <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300" onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-gradient-to-t from-[var(--cor-fundo-secundario)] to-transparent"></div>
-                    <i data-lucide="image-off" class="absolute w-12 h-12 text-[var(--cor-texto-secundario)]/50"></i>
+                    
                 </div>
                 <h3 class="text-xl font-bold text-[var(--cor-texto)] mb-2 group-hover:text-[var(--cor-destaque)] transition-colors duration-300">${product.name}</h3>
                 <p class="text-[var(--cor-texto-secundario)] text-sm">${product.description}</p>
