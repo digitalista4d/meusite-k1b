@@ -1,106 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KASANJI 1BOX - Inovação em Displays Inteligentes</title>
-  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASANJI 1BOX - Inovação em Displays Inteligentes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-[var(--cor-fundo-primario)] text-[var(--cor-texto)] font-['Inter',sans-serif] antialiased">
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <div id="app" class="flex flex-col min-h-screen">
-    <!-- Header com logo e menu -->
+
+    <div id="app" class="flex flex-col min-h-screen">
     <header class="w-full py-8 bg-white relative flex items-center justify-center border-b border-[var(--cor-borda)]">
-      <img src="Kasanji Logo Transparente.png" alt="Kasanji 1BOX Logo" class="w-[220px] animate-logo-glow drop-shadow-[0_0_25px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:scale-105"/>
-      <button id="command-button" class="fixed top-6 right-6 text-black bg-white rounded-full shadow-lg p-2 z-[110]" aria-label="Abrir Menu">
-        <i data-lucide="menu" class="w-7 h-7"></i>
-      </button>
-    </header>
+  <!-- Logo centralizado -->
+  <img 
+  src="Kasanji%20Logo%20Transparente.png"
+  alt="Kasanji 1BOX Logo"
+  class="w-[220px] animate-logo-glow drop-shadow-[0_0_25px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:scale-105" />
 
-    <main class="flex-grow">
-      <!-- Seções início, sobre, produtos, catálogo e tecnologias -->
-      <section id="inicio" class="..."> <!-- sua marcação existente --> </section>
-      <section id="sobre" class="..."> <!-- sua marcação existente --> </section>
-      <section id="produtos" class="..."> <!-- sua marcação existente --> 
-        <div id="produtos-grid" class="grid ..."></div>
-      </section>
-      <section id="catalogo" class="..."> <!-- existente --> </section>
-      <section id="tecnologias" class="..."> <!-- existente --> </section>
+  <!-- Botão do Menu no canto superior direito -->
+<button id="command-button" class="fixed top-6 right-6 text-black bg-white rounded-full shadow-lg p-2 z-[110] transition-all duration-300 hover:bg-neutral-100" aria-label="Abrir Menu">
+    <i data-lucide="menu" class="w-7 h-7"></i>
+  </button>
+</header>
 
-      <!-- Seção de Contato (ajustada) -->
-      <section id="contato" class="py-16 md:py-24">
-        <div class="container mx-auto px-6">
-          <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
-            <p class="text-lg text-[var(--cor-texto-secundario)] mb-10">Tem um projeto em mente? Nossa equipe está pronta para ajudar a transformar sua visão em realidade. Preencha o formulário abaixo.</p>
-          </div>
-          <form id="contato-form" class="max-w-2xl mx-auto" action="https://formsubmit.co/Comercial@k1b.ao" method="POST">
-            <input type="hidden" name="_next" value="https://meusite-k1b.vercel.app/#contato?success=true">
-            <input type="hidden" name="_captcha" value="false">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Nome</label>
-                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)]"/>
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)]"/>
-              </div>
-            </div>
-            <div class="mb-6">
-              <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
-              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)]"></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">Enviar Mensagem</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-[var(--cor-fundo-primario)] border-t border-[var(--cor-borda)] mt-auto">
-      <div class="container mx-auto px-6 py-8 text-center text-[var(--cor-texto-secundario)]">
-        <p>&copy; 2025 KASANJI 1BOX. Todos os direitos reservados.</p>
+
+        <main class="flex-grow">
+            
+            <section id="inicio" class="text-center py-20 md:py-32 bg-[var(--cor-fundo-secundario)] border-b border-[var(--cor-borda)]">
+                <div class="container mx-auto px-6">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Redefinindo a Interação Entre Tecnologia e Arquitetura</h1>
+                    <p class="text-lg md:text-xl text-[var(--cor-texto-secundario)] mb-8 max-w-3xl mx-auto">Transformamos superfícies passivas em telas dinâmicas e inteligentes, integrando o mundo digital ao ambiente físico de forma fluida e elegante.</p>
+                    <a href="#produtos" class="inline-block bg-[var(--cor-destaque)] text-white font-semibold px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
+                        Explore nossos Produtos
+                    </a>
+                </div>
+            </section>
+
+        <section id="sobre" class="py-16 md:py-24">
+                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nossa Visão</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Inovação que Inspira e Eleva a Experiência Humana</h2>
+                        <div class="space-y-4 text-[var(--cor-texto-secundario)]">
+                            <p>A KASANJI 1BOX foi fundada com o propósito de redefinir a interação entre tecnologia e arquitetura. Nossa missão é transformar superfícies passivas em telas dinâmicas e inteligentes, integrando o mundo digital ao ambiente físico de forma fluida e elegante.</p>
+                            <p>Impulsionados pela inovação, criamos soluções de display que não apenas comunicam, mas também inspiram e elevam a experiência humana, mantendo a estética e a funcionalidade no centro de tudo o que fazemos.</p>
+                        </div>
+                    </div>
+<!-- Logo centralizado com fundo claro apenas atrás dele -->
+<div class="relative z-10 rounded-full bg-white/60 backdrop-blur-sm px-6 py-3">
+  <img 
+    src="Kasanji%20Logo%20Transparente.png"
+    alt="Logotipo KASANJI 1BOX"
+    class="w-[220px] animate-logo-glow drop-shadow-[0_0_25px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:scale-105"
+  />
+</div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="produtos" class="py-16 md:py-24 bg-[var(--cor-fundo-secundario)] border-y border-[var(--cor-borda)]">
+                <div class="container mx-auto px-6">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nosso Portfólio</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-12">Produtos que Moldam o Futuro</h2>
+                    </div>
+                    <div id="produtos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+                </div>
+            </section>
+            
+<section id="catalogo" class="py-16 md:py-24 bg-white text-black border-y border-[var(--cor-borda)]">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">📘 Catálogo Oficial KASANJI 1BOX</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+      Conheça todos os nossos produtos, tecnologias e soluções de ponta em displays inteligentes. 
+      O catálogo reúne imagens, especificações técnicas e casos de sucesso da KASANJI 1BOX.
+    </p>
+    <a href="https://drive.google.com/drive/folders/1BRldRvUFn00Y_ezZhHPG-9ESzmBwWYiQ?usp=sharing" target="_blank"
+       class="inline-block bg-black text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:bg-neutral-800 transition">
+      📂 Acessar Catálogo Digital
+    </a>
+  </div>
+</section>
+
+          <section id="tecnologias" class="py-16 md:py-24 bg-[var(--cor-fundo-secundario)] border-y border-[var(--cor-borda)]">
+  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 items-start">
+
+    <!-- Texto Institucional -->
+    <div class="md:col-span-1">
+      <span class="text-sm font-semibold text-[var(--cor-destaque)] uppercase">Nossa Base</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">
+        Inovação de Ponta. <br class="hidden md:block">Tecnologia que Transforma.
+      </h2>
+      <p class="text-[var(--cor-texto-secundario)] text-lg leading-relaxed mb-4">
+        Na <strong>K1B</strong>, a inovação não é apenas um pilar — é nossa essência. Desenvolvemos experiências tecnológicas com <span class="text-[var(--cor-destaque)]">vidro inteligente, controle de privacidade</span> e <span class="text-[var(--cor-destaque)]">exibição interativa</span>, redefinindo o conceito de superfícies.
+      </p>
+      <p class="text-[var(--cor-destaque)] text-sm uppercase tracking-wide mt-6 animate-pulse">
+        Tecnologia que não só impressiona — ela transforma.
+      </p>
+    </div>
+
+    <!-- Elemento Visual Central -->
+    <div class="flex items-center justify-center">
+      <div class="w-64 h-64 rounded-full bg-gradient-to-br from-[#00ffff] to-[#0077ff] shadow-2xl border-4 border-[var(--cor-destaque)] flex items-center justify-center animate-pulse">
+        <svg class="w-20 h-20 text-black drop-shadow-lg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3v1.5M7.5 3v1.5M3 7.5h1.5M19.5 7.5H21M4.5 19.5V21M19.5 19.5V21M3 16.5h1.5M19.5 16.5H21M7.5 21v-1.5M16.5 21v-1.5M12 8.25v7.5M8.25 12h7.5" />
+        </svg>
       </div>
-    </footer>
+    </div>
+
+    <!-- Mini-cards Tecnológicos -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-[#131d2c] p-4 rounded-lg border border-[var(--cor-borda)] flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[var(--cor-destaque)]/30">
+        <i data-lucide="shield-check" class="text-[var(--cor-destaque)] w-6 h-6"></i>
+        <span class="text-white">Privacidade Inteligente</span>
+      </div>
+      <div class="bg-[#131d2c] p-4 rounded-lg border border-[var(--cor-borda)] flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[var(--cor-destaque)]/30">
+        <i data-lucide="zap" class="text-[var(--cor-destaque)] w-6 h-6"></i>
+        <span class="text-white">Eficiência Energética</span>
+      </div>
+      <div class="bg-[#131d2c] p-4 rounded-lg border border-[var(--cor-borda)] flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[var(--cor-destaque)]/30">
+        <i data-lucide="layers" class="text-[var(--cor-destaque)] w-6 h-6"></i>
+        <span class="text-white">Displays Multi-camada</span>
+      </div>
+      <div class="bg-[#131d2c] p-4 rounded-lg border border-[var(--cor-borda)] flex items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[var(--cor-destaque)]/30">
+        <i data-lucide="eye" class="text-[var(--cor-destaque)] w-6 h-6"></i>
+        <span class="text-white">Visibilidade Direcional</span>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <!-- Menu Overlay -->
-  <div id="menu-overlay" class="..."> <!-- existente --> </div>
+            <section id="contato" class="py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-2xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+                        <p class="text-lg text-[var(--cor-texto-secundario)] mb-10">Tem um projeto em mente? Nossa equipe está pronta para ajudar a transformar sua visão em realidade. Preencha o formulário abaixo.</p>
+                    </div>
+                    <form class="max-w-2xl mx-auto" action="mailto:Comercial@k1b.ao" method="POST" enctype="text/plain">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-[var(--cor-borda)] rounded-md bg-[var(--cor-fundo-secundario)] focus:ring-2 focus:ring-[var(--cor-destaque)] focus:outline-none transition-shadow text-[var(--cor-texto)]"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-[var(--cor-destaque)] text-white font-semibold px-10 py-3 rounded-md hover:opacity-90 transition-opacity">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
 
-  <!-- Modal de Produto -->
-  <div id="product-modal" class="..."> <!-- existente --> </div>
+        <footer class="bg-[var(--cor-fundo-primario)] border-t border-[var(--cor-borda)] mt-auto">
+            <div class="container mx-auto px-6 py-8 text-center text-[var(--cor-texto-secundario)]">
+                <p>&copy; 2025 KASANJI 1BOX. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
 
-  <!-- Mensagem de sucesso -->
-  <div id="form-success" class="fixed bottom-6 right-6 z-[9999] bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg opacity-0 pointer-events-none transition-all duration-500">
-    ✅ Mensagem enviada com sucesso!
-  </div>
+    <div id="menu-overlay">
+      <nav>
+          <ul class="space-y-6">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre Nós</a></li>
+              <li><a href="#produtos">Produtos</a></li>
+             <li><a href="galeria/">Galeria</a></li>
+              <li><a href="#tecnologias">Tecnologias</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+      </nav>
+    </div>
 
-  <!-- Scripts JS -->
-  <script type="module" src="script.js"></script>
-  <script src="interactive.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const msg = document.getElementById("form-success");
-      if (params.get("success") === "true") {
-        msg.classList.add("opacity-100");
-        msg.classList.remove("pointer-events-none");
-        setTimeout(() => {
-          msg.classList.remove("opacity-100");
-          msg.classList.add("opacity-0", "pointer-events-none");
-        }, 5000);
-      }
-    });
-  </script>
+    <div id="product-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-[var(--cor-fundo-primario)]/90 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div id="modal-content" class="relative w-full max-w-4xl bg-[var(--cor-fundo-secundario)] rounded-lg border border-[var(--cor-borda)] shadow-2xl shadow-black/50 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 transition-transform duration-300 transform scale-95">
+            
+            <div class="relative w-full h-64 md:h-auto rounded-md overflow-hidden border border-[var(--cor-borda)] bg-[var(--cor-fundo-primario)] flex items-center justify-center">
+                <img id="modal-image" src="" alt="Imagem do produto" class="w-full h-full object-cover">
+            </div>
+    
+            <div class="flex flex-col">
+                <h3 id="modal-title" class="text-3xl font-bold text-[var(--cor-destaque)] mb-4"></h3>
+                <p id="modal-description" class="text-[var(--cor-texto-secundario)] text-base flex-grow"></p>
+                <div class="mt-6 text-right">
+                    <a href="https://wa.me/244923900273" target="_blank" rel="noopener noreferrer" id="modal-contact-link"
+   class="inline-block text-sm font-semibold text-[var(--cor-destaque)] hover:underline">
+   Solicitar Orçamento via WhatsApp &rarr;
+</a>
+                </div>
+            </div>
+    
+            <button id="modal-close-button" class="absolute top-4 right-4 text-[var(--cor-texto-secundario)] hover:text-[var(--cor-destaque)] transition-colors" aria-label="Fechar modal">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script src="interactive.js"></script>
 </body>
 </html>
